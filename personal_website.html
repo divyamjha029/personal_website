@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Divyam Jha</title>
+    <link rel="stylesheet" href="styles.css">
+    
+
+
+</head>
+<body  >
+   
+
+  <div class="image-container">
+        <img class="static-image" src="me2.png" alt="Static Image">
+
+        <img class="gif-image" src="https://media.giphy.com/media/v1.Y2lkPWVjZjA1ZTQ3aDN5MXZoa3p1YzRmZjBycG84bTAwdXMzdGF5N2UwdWk5ZjVic29jMiZlcD12MV9naWZzX3RyZW5kaW5nJmN0PWc/7zMvSDWl3RkDSpOjBC/giphy.gif" alt="Animated GIF">
+    </div>
+
+
+
+
+    <h1>Hi, my name is Divyam Jha</h1>
+
+    <h3>Fun facts about me:</h3>
+    
+    
+
+    <ul >
+         <li>Live in India</li>
+         <li>Love Cream Cakes</li>
+         <li>Love sleeping</li>
+         <li>Stucked in existential crisis</li>
+         <li>Love destruction until it is my turn</li>
+    </ul>
+
+    <p>Connect with me on <a href="https://www.instagram.com/divyamjha029/" target='_blank'>Insta here</a></p>
+
+
+    <form id="contact-form" action="https://formspree.io/f/xzzjvrpg" method="POST">
+
+    <label>
+        Your jhopadi:
+        <input type="email" name="email" placeholder="your.email@example.com" required>
+    </label>
+
+    <label>
+        Start Cooking:
+        <textarea name="message" placeholder="Say something you Dumb...." required></textarea>
+    </label>
+    
+    <button type="submit">Cook him</button>
+
+</form>
+
+
+
+    <button ><a  href="https://github.com/divyamjha029/Firework" target='_blank'>Visit Github</a></button>
+
+  <script>
+    var form = document.getElementById("contact-form");
+
+    async function handleSubmit(event) {
+      event.preventDefault();
+      var data = new FormData(event.target);
+      
+      fetch(event.target.action, {
+        method: form.method,
+        body: data,
+        headers: {
+            'Accept': 'application/json'
+        }
+      }).then(response => {
+        if (response.ok) {
+          // --- CHANGE 1: Show a popup alert instead of a message ---
+          alert("Sent!"); 
+          // --- CHANGE 2: We no longer hide the form, just clear it ---
+          form.reset();
+        } else {
+          response.json().then(data => {
+            if (Object.hasOwn(data, 'errors')) {
+              alert(data["errors"].map(error => error["message"]).join(", "))
+            } else {
+              alert("Oops! There was a problem submitting your form.")
+            }
+          })
+        }
+      }).catch(error => {
+        alert("Oops! There was a problem submitting your form.")
+      });
+    }
+
+    form.addEventListener("submit", handleSubmit)
+</script>
+
+</body>
+</html>

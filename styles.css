@@ -1,0 +1,128 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Bitcount+Grid+Double+Ink:wght@100..900&family=Bitcount+Prop+Single+Ink:wght@100..900&family=Luckiest+Guy&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Shadows+Into+Light&display=swap');
+
+
+
+
+body {
+
+    background-color:#1A202C;
+    color: #E2E8F0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align:center;
+    list-style-position:inside;
+    font-size:x-large;
+    
+}
+
+
+/* Style the form container */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* Adds space between the form elements */
+  max-width: 400px; /* Prevents the form from being too wide */
+  margin: 20px auto; /* Centers the form on the page */
+}
+
+/* Style the text and message boxes */
+form input, form textarea {
+  width: 100%;
+  padding: 10px;
+  background-color: #f0f0f0; /* Light grey background */
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-family: 'Poppins', sans-serif; /* Use the same font as the rest of the page */
+  box-sizing: border-box; /* Important for padding and width */
+}
+
+/* Style the labels (the text above the boxes) */
+form label {
+    text-align: left; /* Aligns the "Your email:" text to the left */
+    color: #ffffff;
+    font-size: 0.9em;
+}
+
+/* Style the send button */
+form button {
+  padding: 10px 20px;
+  border: 1px solid #fff;
+  background-color: transparent;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+form button:hover {
+  background-color: #2c666e;
+  color: #2D3748; /* A dark color for the text on hover */
+}
+
+h1, h3 {
+    font-family: 'Bitcount Prop Single Ink', sans-serif;
+    
+}
+
+ul{
+    font-family: 'Bitcount Grid Double Ink', sans-serif;
+    display:inline-block;
+
+    
+}
+
+
+p{
+    font-family: 'Luckiest Guy', sans-serif;
+    
+}
+
+ul:hover{
+  font-family: 'Shadows Into Light';
+  
+}
+
+
+ .image-container {
+        position: relative; /* This is crucial for positioning the images inside */
+        width: 300px; /* Set your desired width */
+        height: 300px; /* Set your desired height */
+        display:inline-block;
+        
+    }
+
+    /* Style for both images to make them stack */
+    .image-container img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        transition: opacity 0.3s ease-in-out; /* Adds a smooth fade effect */
+        
+    }
+
+    /* The GIF is hidden by default */
+    .image-container .gif-image {
+        opacity: 0;
+    }
+
+    /* When hovering over the container, show the GIF */
+    .image-container:hover .gif-image {
+        opacity: 1;
+    }
+
+
+    .static-image{
+      border-radius: 50%;
+    }
+
+    .gif-image{
+      
+      border-radius: 50%;
+    }
+
+
+
+    
